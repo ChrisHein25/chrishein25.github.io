@@ -2,9 +2,62 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>My New Site</title>
+    <title>Chris's Site</title>
 </head>
 <body>
+<style>
+  #magic8ball {
+    width: 200px;
+    height: 200px;
+    background-color: #333;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    cursor: pointer;
+  }
+</style>
+</head>
+<body>
+
+<div id="magic8ball">Click me!</div>
+
+<script>
+  const responses = [
+    "It is certain.",
+    "It is decidedly so.",
+    "Without a doubt.",
+    "Yes, definitely.",
+    "You may rely on it.",
+    "As I see it, yes.",
+    "Most likely.",
+    "Outlook good.",
+    "Yes.",
+    "Signs point to yes.",
+    "Reply hazy, try again.",
+    "Ask again later.",
+    "Better not tell you now.",
+    "Cannot predict now.",
+    "Concentrate and ask again.",
+    "Don't count on it.",
+    "My reply is no.",
+    "My sources say no.",
+    "Outlook not so good.",
+    "Very doubtful."
+  ];
+
+  const magic8ball = document.getElementById('magic8ball');
+
+  magic8ball.addEventListener('click', () => {
+    const randomIndex = Math.floor(Math.random() * responses.length);
+    magic8ball.innerText = responses[randomIndex];
+  });
+</script>
+
+
+    
 <p>Here is a lowly <code>&lt;p&gt;</code> element.</p>
 </body>
 </html>
